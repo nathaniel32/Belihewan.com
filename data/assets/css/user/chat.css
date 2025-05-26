@@ -1,0 +1,361 @@
+.chat_container{
+    display: flex;
+    justify-content: center;
+}
+
+.chat_control{
+    display: flex;
+    width: 100%;
+    background-color: hsl(34, 19%, 93%);
+    height: 70vh;
+    margin: 10px 20px;
+    border-radius: .25rem;
+    box-shadow: 0px 0px 2px 3px hsla(0, 0%, 0%, 0.1);
+    overflow: hidden;
+}
+
+#chat_pesan_container{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat_pesan_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8px 5px 10px;
+}
+
+.header_info_pesan_container{
+    overflow: hidden;
+}
+
+#judul_iklan_pesan{
+    margin: 0;
+    font-size: 1.1rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nama_partner_pesan_container{
+    margin-top: 2px;
+    font-size: 0.9rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#close_display_pesan{
+    cursor: pointer;
+}
+
+#pesan_isi_container{
+    width: 100%;
+    overflow: auto;
+    background-color: hsl(151, 36%, 73%);
+    padding: 0 10px 30px 10px;
+    height: 100%;
+}
+
+.chat_pesan_input{
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chat_pesan_input textarea{
+    width: 100%;
+    resize: none;
+    
+    padding: 10px 0 0 10px;
+
+	font-size: 1rem;
+	line-height: 1.0;
+	color: #495057;
+	background-color: #fff;
+    border: none;
+    outline: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.pesan_isi_partner_container{
+    text-align: start;
+}
+
+.pesan_isi_partner_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+.pesan_isi_me_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.pesan_isi_control{
+    background-color: hsl(180, 100%, 97%);
+    padding: 5px 8px;
+    border-radius: 8px;
+    max-width: 60%;
+    display: flex;
+    gap: 5px;
+}
+
+.pesan_isi_text{
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.pesan_isi_waktu{
+    font-size: 0.5rem;
+    align-self: end;
+}
+
+.kontak_list{
+    display: flex;
+    cursor: pointer;
+    padding: 8px 10px 5px 10px;
+    gap: 10px;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+    overflow: hidden;
+}
+
+.kontak_list_img_control{
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+    border: 1px solid hsla(0, 0%, 0%, 0.5);
+}
+
+.kontak_list_img_container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+    max-height: 100%; */
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kontak_list_text_container{
+    height: 60px;
+    overflow: hidden;
+}
+
+.kontak_list_text_container h3{
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kontak_list_text_partner_name{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+#chat_kontak_container{
+    background-color: hsla(137, 23%, 82%, 0.7);
+    overflow-y: auto;
+}
+
+#submitPesan{
+    background-color: hsl(180, 4%, 48%);
+
+    transition: background-color 0.4s;
+    
+    border:1px solid transparent;
+    vertical-align:middle;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+@media (max-width: 575px) {
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .chat_kontak_cl{
+        display: none;
+    }
+
+    .chat_control{
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 12%;
+        flex: 0 0 12%;
+        max-width: 12%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .chat_kontak_cl{
+        display: none;
+    }
+
+    .chat_control{
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    .chat_kontak_cl{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    .chat_control{
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .chat_kontak_cl{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .chat_control{
+        max-width: 950px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .chat_kontak_cl{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .chat_control{
+        max-width: 1050px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .kontak_list_img_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_kontak_op{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_kontak_cl{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .chat_control{
+        max-width: 1100px;
+    }
+}

@@ -1,0 +1,1040 @@
+.shareContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 9px;
+    max-width: 500px;
+    white-space: nowrap;
+}
+.share-button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: none;
+    border-radius: .25rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 7px 16px;
+    transition: background-color 0.4s;
+}
+
+.share-button img{
+    width: 15px;
+}
+
+.facebook {
+    background-color: hsl(221, 44%, 41%);
+}
+.facebook:hover {
+    background-color: hsl(221, 54%, 51%); /* Lebih cerah 10% dari aslinya */
+}
+.facebook:active {
+    background-color: hsl(221, 34%, 31%); /* Lebih gelap 10% dari aslinya */
+}
+
+.twitter {
+    background-color: hsl(180, 2%, 10%);
+}
+.twitter:hover {
+    background-color: hsl(203, 99%, 20%);
+}
+.twitter:active {
+    background-color: hsl(203, 79%, 0%);
+}
+
+/* .linkedin {
+    background-color: hsl(201, 100%, 35%);
+}
+.linkedin:hover {
+    background-color: hsl(201, 100%, 45%);
+}
+.linkedin:active {
+    background-color: hsl(201, 100%, 25%);
+} */
+
+/* .pinterest {
+    background-color: hsl(353, 92%, 39%);
+}
+.pinterest:hover {
+    background-color: hsl(353, 92%, 49%);
+}
+.pinterest:active {
+    background-color: hsl(353, 92%, 29%);
+} */
+
+.mail {
+    background-color: hsl(186, 86%, 45%);
+}
+.mail:hover {
+    background-color: hsl(186, 86%, 55%);
+}
+.mail:active {
+    background-color: hsl(186, 86%, 35%);
+}
+
+.reddit {
+    background-color: hsl(16, 100%, 50%);
+}
+.reddit:hover {
+    background-color: hsl(16, 100%, 60%);
+}
+.reddit:active {
+    background-color: hsl(16, 100%, 40%);
+}
+
+.whatsapp {
+    background-color: hsl(142, 70%, 49%);
+}
+.whatsapp:hover {
+    background-color: hsl(142, 80%, 59%);
+}
+.whatsapp:active {
+    background-color: hsl(142, 60%, 39%);
+}
+
+/*---------------------*/
+
+.iklanUsername{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.dataUserProfile{
+    padding: 10px 10px 0 10px;
+}
+
+
+.profile_image_container{
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: 3px solid hsla(0, 0%, 0%, 0.8);
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.profile_image_container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.iklan_carousel_container{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+.iklan_carousel_container img{
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide{
+    display: block;
+    animation: displayFade;
+    animation-duration: 1.5s;
+}
+
+.item_call_container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_iklan_carousel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 1.4rem;
+    color: hsla(0, 0%, 100%, 0.5);
+    background-color: hsla(0, 0%, 0%, 0.1);
+
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    margin: 0 3px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .iklan_carousel_container button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: gray;
+    padding: 10px 15px;
+    background-color: transparent;
+    //touch-action: manipulation;
+} */
+
+.prevBtn_iklan_carousel{
+    left: 0;
+}
+
+.nextBtn_iklan_carousel{
+    right: 0;
+}
+
+.no_image{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 8px;
+    text-shadow: 1px 1px 0 #b5a1a1,
+                 -2px 2px 0 rgb(139, 144, 134);
+}
+
+/*-----------------------------------------------------------------------*/
+
+.zoom_pop_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* align-items: center; */
+    background-color: #000000 !important;
+}
+
+.zoom_img_container{
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #000000;
+}
+
+.zoom_img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center; */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* .zoom_pop_container button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: gray;
+    padding: 10px 15px;
+    background-color: transparent;
+    //touch-action: manipulation;
+} */
+
+.prevZoomBtn_iklan_carousel{
+    left: 0;
+}
+
+.nextZoomBtn_iklan_carousel{
+    right: 0;
+}
+
+/*-----------------------------------------------------------------------*/
+
+.iklan_container{
+    width: 100%;
+	padding-right: 8px;
+	padding-left: 8px;
+	margin-right: auto;
+	margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.isi_controller{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: hsl(210, 18%, 82%); */
+    margin-bottom: 10px;
+}
+
+.container_iklan_image {
+    width: 100%;
+    padding-top: 60%;
+    border-radius: .25rem;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 0%);
+}
+
+.control_iklan_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.control_iklan_image.dragging{
+    cursor: grabbing;
+}
+
+.control_iklan_image.dragging img{
+    pointer-events: none;
+    user-select: none;
+}
+
+.control_iklan_image img{
+    /* object-fit: cover;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; */
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.iklan_judul{
+    font-weight: 600;
+    margin: 5px 0 3px 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.iklan_harga_container{
+    overflow-x: auto;
+}
+
+.iklan_harga_nr{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+    /* color: hsl(30, 4%, 18%); */
+    white-space: nowrap;
+}
+
+.iklan_harga_ket{
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.iklan_lokasi{
+    display: flex;
+    align-items: center;
+    gap: 3.5px;
+}
+
+.iklan_lokasi img{
+    margin-top: 2px;
+    align-self: start;
+}
+
+.iklan_text_lokasi{
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    gap: 10px;
+}
+
+.iklan_lokasi_alamat{
+    font-size: 0.85rem;
+}
+
+.iklan_lokasi_daerah{
+    padding-top: 0.7px;
+    font-size: 0.85rem;
+}
+
+.iklanTanggalViewContainer{
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.iklan_tanggal{
+    font-size: 0.9rem;
+}
+
+.iklan_view{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+}
+
+.iklan_lokasi, .iklanTanggalViewContainer, .dataIklanContainer{
+    margin-top: 5px;
+}
+
+.iklan_deskripsi{
+    font-size: 0.9;
+    margin: 0 0 5px 0;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    word-wrap: break-word;
+    font-size: 0.9rem;
+}
+
+.user_container, .iklan_ket_container{
+    background-color: hsl(180, 21%, 92%);
+    box-shadow: 0 0 0.2px 0.7px hsl(0, 0%, 0%, 0.1);
+}
+
+.user_container{
+    padding: 10px 15px;
+    border-radius: .25rem;
+}
+
+.iklan_ket_container{
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: .25rem;
+}
+
+.breadCrumbContainer{
+    margin: 2px 5px 3px 3px;
+    font-weight: 600;
+}
+
+#itemCall{
+    margin: 2px;
+    padding: 8px 13px;
+    font-weight: 600;
+    background-color: hsl(127, 61%, 65%);
+    font-size: 0.9rem;
+    color: hsl(0, 30%, 98%);
+    display: none;
+}
+
+#itemCall:hover{
+    background-color: hsl(127, 61%, 70%);
+    color: hsl(0, 0%, 100%);
+}
+
+/*----------------------------*/
+
+.user_container h2, .iklan_ket_container h2{
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 0%, 0.4);
+}
+
+.dataUserContainer{
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.wa_linkBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.wa_linkBtn img{
+    width: 100%;
+    max-width: 200px;
+}
+
+.dataIklanContainer{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.dataIklanIsi{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.iklanClientContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.iklanClientContainer button{
+    padding: 10px 15px;
+    font-weight: 600;
+    color: hsl(208, 100%, 97%);
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wishBtnContainer, .chatBtnContainer, .reportBtnContainer{
+    padding: 4px;
+}
+
+#repotIklanBtn{
+    background-color: hsl(0, 87%, 49%);
+}
+
+#repotIklanBtn:hover{
+    background-color: hsl(0, 87%, 69%);
+}
+
+#wishlistIklanBtn{
+    background-color: hsl(62, 83%, 43%);
+}
+
+#wishlistIklanBtn:hover{
+    background-color: hsl(62, 83%, 53%);
+}
+
+#chatIklanBtn{
+    background-color: hsl(60, 31%, 40%);
+}
+
+#chatIklanBtn:hover{
+    background-color: hsl(60, 31%, 50%);
+}
+
+.list_all_caller{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.list_all_caller img{
+    width: 50px;
+}
+
+@media (max-width: 575px) {
+    .profile_image_container{
+        height: 60px;
+        width: 60px;
+    }
+    .iklan_container{
+        max-width: 460px;
+    }
+    
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .iklan_judul{
+        font-size: 1.1rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        padding: 3px;
+    } */
+
+    .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    .share-text{
+        display: none;
+    }
+    .user_container{
+        margin-top: 10px;
+    }
+
+    .wishBtnContainer, .chatBtnContainer{
+        width: calc(100%/2);
+    }
+
+    .reportBtnContainer{
+        width: 100%;
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.8rem;
+    }
+}
+
+.reportIklanContainer{
+    display: flex;
+}
+
+/*---------------------------------------------------*/
+
+.popupReport_form, .popupChat_form{
+    position: relative;
+    width: 100%;
+    padding: 30px 50px;
+    max-width: 500px;
+}
+
+.popupReport_form .form_title, .popupChat_form .form_title{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.popupReport_form form, .popupReport_form .formLabel, .popupChat_form form, .popupChat_form .formLabel{
+    display: flex;
+    flex-direction: column;
+}
+
+.popupReport_form .formLabel, .popupChat_form .formLabel{
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.popupReport_form textarea, .popupChat_form textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.popupReport_form .btn, .popupChat_form .btn{
+    background-color: hsl(220, 90%, 50%);
+    color: hsl(0, 0%, 100%);
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 1rem;
+}
+
+.popupReport_form .btn:disabled, .popupChat_form .btn:disabled{
+    background-color: hsl(220, 90%, 70%);
+    cursor: wait;
+}
+
+.popupReport_form .btn:enabled:hover, .popupChat_form .btn:enabled:hover{
+    background-color: hsl(220, 90%, 60%);
+}
+
+/*----------------------------------------------------------*/
+
+@media (min-width: 576px) and (max-width: 767px){
+    .profile_image_container{
+        height: 65px;
+        width: 65px;
+    }
+    .iklan_container{
+        max-width: 600px;
+    }
+
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .iklan_judul{
+        font-size: 1.15rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+
+        padding: 3px;
+    } */
+
+    .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    .share-text{
+        display: none;
+    }
+
+    .user_container{
+        margin-top: 10px;
+    }
+
+    .wishBtnContainer, .chatBtnContainer, .reportBtnContainer{
+        width: calc(100%/3);
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .profile_image_container{
+        height: 80px;
+        width: 80px;
+    }
+    .profile_image_container, .iklanUsername{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .iklanUsername{
+        margin-top: 3px;
+    }
+    .iklan_container{
+        max-width: 730px;
+    }
+
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%
+    }
+
+    .user_container{
+        margin-left: 10px;
+        position: sticky;
+        top: 130px;
+    }
+    .iklan_judul{
+        font-size: 1.15rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+
+        padding: 4px;
+    } */
+
+    .isi_container .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .isi_container .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+
+    .dataUserContainer .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataUserContainer .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .wishBtnContainer, .chatBtnContainer, .reportBtnContainer{
+        width: 100%;
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .profile_image_container{
+        height: 60px;
+        width: 60px;
+    }
+    .iklan_container{
+        max-width: 900px;
+    }
+
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%
+    }
+
+    .user_container{
+        margin-left: 10px;
+        position: sticky;
+        top: 100px;
+    }
+    .iklan_judul{
+        font-size: 1.2rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+
+        padding: 4px;
+    } */
+
+    .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    .wishBtnContainer, .chatBtnContainer{
+        width: calc(100%/2);
+    }
+
+    .reportBtnContainer{
+        width: 100%;
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    .profile_image_container{
+        height: 60px;
+        width: 60px;
+    }
+    .iklan_container{
+        max-width: 1040px;
+    }
+
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%
+    }
+
+    .user_container{
+        margin-left: 10px;
+        position: sticky;
+        top: 100px;
+    }
+    .iklan_judul{
+        font-size: 1.2rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding: 5px;
+    } */
+
+    .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    .wishBtnContainer, .chatBtnContainer{
+        width: calc(100%/2);
+    }
+
+    .reportBtnContainer{
+        width: 100%;
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .profile_image_container{
+        height: 60px;
+        width: 60px;
+    }
+    .iklan_container{
+        max-width: 1100px;
+    }
+    
+    .isi_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%
+    }
+    
+    .kontak_container{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .user_container{
+        margin-left: 10px;
+        position: sticky;
+        top: 100px;
+    }
+
+    .iklan_judul{
+        font-size: 1.2rem;
+    }
+    /* .list_item{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+
+        padding: 5px;
+    } */
+
+    .dataIklanTitle{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .dataIklanIsi{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    .wishBtnContainer, .chatBtnContainer{
+        width: calc(100%/2);
+    }
+
+    .reportBtnContainer{
+        width: 100%;
+    }
+
+    .breadCrumbContainer{
+        font-size: 0.9rem;
+    }
+}

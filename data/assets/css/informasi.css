@@ -1,0 +1,73 @@
+.kontak_container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.kontak_form {
+    margin-top: 20px;
+}
+
+.kontak_group {
+    margin-bottom: 10px;
+}
+
+.kontak_group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kontak_group input[type="text"],
+.kontak_group input[type="email"],
+.kontak_group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+}
+
+.kontak_group textarea {
+    resize: vertical;
+}
+
+.kontak_submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.kontak_submit:hover {
+    background-color: #45a049;
+}
+
+.kontak_submit:disabled{
+    background-color: hsl(220, 90%, 70%);
+    cursor: wait;
+}
+
+.section_informasi{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.section_informasi h2{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.section_informasi ul{
+    margin: 10px 0 0 0;
+}
+
+.section_informasi li{
+    margin: 15px 0 0 0;
+}
+
+.informasi_kontak_link{
+    color: rgb(77, 72, 220);
+    font-weight: 600;
+}

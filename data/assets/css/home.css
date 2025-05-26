@@ -1,0 +1,237 @@
+.ads_bar_container{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.ads_bar_container button{
+    margin: 0 3px;
+    color: hsl(111, 76%, 29%);
+    font-size: 0.8rem;
+    height: 32px;
+    width: 32px;
+}
+
+.ads_bar_control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: .25rem;
+    display: flex;
+    overflow: hidden;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.ads_bar_item_container, .ads_bar_item_container a{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.ads_bar_control img{
+    height: 100%;
+    object-fit:cover;
+}
+
+/*-------------------------------------------------------------*/
+/*List first*/
+
+/* .listfirst{
+    text-align: center;
+    padding: 0 10px 15px 10px;
+    font-weight: 600;
+} */
+
+.listfirst_kategori_container{
+    display: grid;
+    gap: 5px;
+    text-align: center;
+
+    padding: 0 5px 15px 5px;
+    font-weight: 600;
+}
+
+.listfirst_kategori_container img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.listfirst_img_container{
+    border: 1.5px solid #ccc;
+    border-radius: .25rem;
+    transition: background-color 0.3s;
+
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.listfirst_img_control{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 25px;
+}
+
+.listfirst_img_container:hover{
+    background-color: hsl(213, 20%, 80%);
+}
+
+.listfirst_kategori_container a{
+    transition: background-color 0.3s;
+}
+
+/* .listfirst_kategori_container a:hover{
+    color: hsl(295, 5%, 50%);
+} */
+
+.listfirst_kategori{
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.list_all_caller{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.list_all_caller img{
+    width: 100px;
+}
+
+/*----------------------------------------------*/
+
+@media (max-width: 575px) {
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .listfirst_img_4, .listfirst_img_5, .listfirst_img_6, .listfirst_img_7, .listfirst_img_8{
+        display: none;
+    }
+    /* .title_home{
+        font-size: 1.4rem;
+    } */
+
+    .ads_bar_container{
+        padding-top: 35%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .listfirst_img_5, .listfirst_img_6, .listfirst_img_7, .listfirst_img_8{
+        display: none;
+    }
+    /* .title_home{
+        font-size: 1.5rem;
+    } */
+
+    .ads_bar_container{
+        padding-top: 25%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .listfirst_img_6, .listfirst_img_7, .listfirst_img_8{
+        display: none;
+    }
+    /* .title_home{
+        font-size: 1.6rem;
+    } */
+
+    .ads_bar_container{
+        padding-top: 23%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .listfirst_img_7, .listfirst_img_8{
+        display: none;
+    }
+    /* .title_home{
+        font-size: 1.7rem;
+    } */
+
+    .ads_bar_container{
+        padding-top: 20%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    /* .title_home{
+        font-size: 1.8rem;
+    } */
+    
+    .listfirst_img_8{
+        display: none;
+    }
+
+    .ads_bar_container{
+        padding-top: 20%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .listfirst_kategori_container{
+        grid-template-columns: repeat(8, 1fr);
+    }
+    /* .title_home{
+        font-size: 1.9rem;
+    } */
+
+    .ads_bar_container{
+        padding-top: 20%;
+    }
+
+    .listfirst_kategori{
+        font-size: 0.95rem;
+    }
+}

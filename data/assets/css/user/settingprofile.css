@@ -1,0 +1,115 @@
+.setting_profile_image_container{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: 2px solid hsla(0, 0%, 0%, 0.2);
+}
+
+.setting_profile_image_container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.setting_profile_container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 15px;
+    border-radius: .25rem;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.setting_profile_label{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+}
+
+.setting_profile_label_title{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    font-weight: 600;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.setting_profile_label_info{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+}
+
+.setting_profile_container h2{
+    margin: 0 0 4px 0;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+    padding-bottom: 3px;
+    width: 100%;
+}
+
+#setting_profile_btn_cancel, #setting_profile_btn_save, #setting_profile_wilayah_btn, #setting_profile_wilayah_remove_btn{
+    display: none;
+}
+
+.setting_profile_btn_control_container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#setting_profile_btn_edit, #setting_profile_btn_cancel, #setting_profile_btn_save{
+    min-width: 45%;
+    padding: 6px 15px;
+    color: hsl(0, 0%, 100%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+
+#setting_profile_btn_edit{
+    background-color: rgb(68, 104, 235);
+}
+
+#setting_profile_btn_cancel{
+    background-color: rgb(235, 68, 68);
+}
+
+#setting_profile_btn_save{
+    background-color: rgb(68, 235, 82);
+}
+
+#setting_profile_wilayah_btn{
+    background-color: rgb(64, 76, 102);
+    color: rgb(255, 255, 255);
+    padding: 4px 10px;
+}
+
+.setting_profile_input{
+    padding: 2px 5px;
+	font-size: 1rem;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+}
+
+.setting_profile_input[readonly]{
+    border: none;
+    outline: none;
+    cursor: auto;
+}
+
+#setting_profile_wilayah_remove_btn{
+    background-color: transparent;
+    border: none;
+    font-size: 0.7rem;
+    cursor: pointer;
+}

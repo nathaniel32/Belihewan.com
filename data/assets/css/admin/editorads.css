@@ -1,0 +1,25 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.formControl{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 15px;
+    padding: 20px 25px;
+    box-shadow: 0px 0px 1px 4px hsl(0, 0%, 0%, 0.2);
+    border-radius: .25rem;
+}
+
+.formControl h2{
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.imgAdsList{
+    width: 100px;
+    height: 100px;
+}

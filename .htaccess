@@ -1,0 +1,80 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect from www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteRule ^kategori/([^/]+)/([^/]+)/?$ /data/template/kategori.php?id=$1&name=$2 [QSA,L]
+RewriteRule ^kategori/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$ /data/template/kategori.php?id=$1&name=$2&kid=$3&kname=$4 [QSA,L]
+RewriteRule ^kategori/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$ /data/template/kategori.php?id=$1&name=$2&kid=$3&kname=$4&ksubid=$5&ksubname=$6 [QSA,L]
+RewriteRule ^kategori/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$ /data/template/kategori.php?id=$1&name=$2&kid=$3&kname=$4&ksubid=$5&ksubname=$6&ksubid=$7&ksubname=$8 [QSA,L]
+RewriteRule ^iklan/([^/]+)/([^/]+)/?$ /data/template/iklan.php?id=$1&name=$2 [QSA,L]
+RewriteRule ^change-password/([^/]+)/([^/]+)/?$ /data/template/user/changepassword.php?code_cp=$1&email=$2 [QSA,L]
+
+RewriteRule ^/?$ data/template/home.php [L]
+RewriteRule ^kategori/?$ data/template/kategori.php [L]
+RewriteRule ^iklan/?$ data/template/iklan.php [L]
+RewriteRule ^profile/?$ data/template/user/profile.php [L]
+RewriteRule ^editor-iklan/?$ data/template/user/editoriklan.php [L]
+RewriteRule ^iklan-saya/?$ data/template/user/iklansaya.php [L]
+RewriteRule ^chat/?$ data/template/user/chat.php [L]
+RewriteRule ^wishlist/?$ data/template/user/wishlistsaya.php [L]
+RewriteRule ^setting-profile/?$ data/template/user/settingprofile.php [L]
+RewriteRule ^admin-home/?$ data/template/admin/adminhome.php [L]
+RewriteRule ^editor-kategori/?$ data/template/admin/editorkategori.php [L]
+RewriteRule ^editor-ads/?$ data/template/admin/editorads.php [L]
+RewriteRule ^change-password/?$ data/template/user/changepassword.php [L]
+RewriteRule ^control-page/?$ data/template/admin/controlpage.php [L]
+RewriteRule ^about/?$ data/template/informasi/about.php [L]
+RewriteRule ^tips/?$ data/template/informasi/tips.php [L]
+RewriteRule ^disclaimer/?$ data/template/informasi/disclaimer.php [L]
+RewriteRule ^faq/?$ data/template/informasi/faq.php [L]
+RewriteRule ^contact/?$ data/template/informasi/contact.php [L]
+RewriteRule ^privacy/?$ data/template/informasi/privacy.php [L]
+RewriteRule ^404/?$ data/template/error/404.php [L]
+RewriteRule ^401/?$ data/template/error/401.php [L]
+RewriteRule ^503/?$ data/template/error/503.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+
+ErrorDocument 400 /data/template/error/400.php
+ErrorDocument 401 /data/template/error/401.php
+ErrorDocument 403 /data/template/error/403.php
+ErrorDocument 404 /data/template/error/404.php
+ErrorDocument 500 /data/template/error/500.php
+ErrorDocument 503 /data/template/error/503.php
+
+<If "%{REQUEST_URI} == '/data/template/data/function.php'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/data/database/conn.php'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/data/database/mail.php'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/data/PHPMailer/'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/data/database/'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/data/'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/template/'">
+    Require all denied
+</If>
+
+<If "%{REQUEST_URI} == '/data/'">
+    Require all denied
+</If>
